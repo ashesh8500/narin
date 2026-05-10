@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMCAS Primary Application — Strategy Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --text: #1c1917;
+    --muted: #78716c;
+    --line: #e7e5e4;
+    --accent: #7c3aed;
+    --accent-muted: #f5f3ff;
+    --green: #059669;
+    --amber: #d97706;
+    --red: #dc2626;
+    --red-muted: #fef2f2;
+    --green-muted: #ecfdf5;
+    --amber-muted: #fffbeb;
+    --blue: #2563eb;
+    --blue-muted: #eff6ff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.625;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 28px 120px;
+  }
+
+  /* Header */
+  .report-header {
+    margin-bottom: 52px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .report-header .label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .report-header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+
+  .report-header .subtitle {
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 48px;
+  }
+
+  section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    color: var(--text);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: var(--text);
+  }
+
+  section p {
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: #44403c;
+  }
+
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin: 16px 0;
+  }
+
+  .data-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--line);
+  }
+
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .data-table td:first-child {
+    font-weight: 500;
+  }
+
+  .data-table .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+  }
+
+  .tag.do { background: var(--green-muted); color: var(--green); }
+  .tag.dont { background: var(--red-muted); color: var(--red); }
+  .tag.info { background: var(--blue-muted); color: var(--blue); }
+
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+  }
+
+  .card.accent-left {
+    border-left: 3px solid var(--accent);
+    padding-left: 21px;
+  }
+
+  .card.green-left {
+    border-left: 3px solid var(--green);
+    padding-left: 21px;
+  }
+
+  .card.red-left {
+    border-left: 3px solid var(--red);
+    padding-left: 21px;
+  }
+
+  .card.blue-left {
+    border-left: 3px solid var(--blue);
+    padding-left: 21px;
+  }
+
+  .card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .card p, .card ul {
+    font-size: 0.88rem;
+    color: #57534e;
+    margin: 0;
+  }
+
+  .card ul {
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+
+  .card ul li {
+    margin-bottom: 4px;
+  }
+
+  /* Section labels */
+  .section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  .section-label.green { color: var(--green); }
+  .section-label.red { color: var(--red); }
+  .section-label.accent { color: var(--accent); }
+  .section-label.amber { color: var(--amber); }
+
+  /* Structure flow */
+  .structure-flow {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+
+  .structure-block {
+    flex: 1;
+    min-width: 100px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 14px;
+    text-align: center;
+  }
+
+  .structure-block .pct {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 2px;
+  }
+
+  .structure-block .name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .structure-block .desc {
+    font-size: 0.68rem;
+    color: var(--muted);
+    line-height: 1.35;
+  }
+
+  /* Callout */
+  .callout {
+    background: var(--accent-muted);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+  }
+
+  .callout p {
+    font-size: 0.9rem;
+    color: #3b0764;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .callout.blue {
+    background: var(--blue-muted);
+    border-left-color: var(--blue);
+  }
+
+  .callout.blue p {
+    color: #1e3a5f;
+  }
+
+  .callout.red {
+    background: var(--red-muted);
+    border-left-color: var(--red);
+  }
+
+  .callout.red p {
+    color: #7f1d1d;
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 0.9rem;
+    color: #44403c;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--line);
+    border-radius: 3px;
+  }
+
+  /* Footer */
+  .report-footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* Divider */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 36px 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 680px) {
+    .container { padding: 32px 16px 80px; }
+    .report-header h1 { font-size: 1.6rem; }
+    .structure-flow { flex-wrap: wrap; }
+    .structure-block { min-width: 80px; flex: 1 1 40%; }
+  }
+
+  @media print {
+    body { background: white; }
+    .container { max-width: 100%; padding: 20px 0; }
+    .card, .structure-block { break-inside: avoid; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="report-header">
+    <div class="label">AMCAS Primary Application</div>
+    <h1>Strategy Guide</h1>
+    <div class="subtitle">Personal Statement &amp; Work &amp; Activities — Structural framework, evidence strategy, and common pitfalls</div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section>
+    <h2>Overview</h2>
+    <p>The AMCAS primary is the single application document read by <strong>every MD program</strong> you apply to. It has two components that carry narrative weight:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Component</th><th>Limit</th><th>What It Does</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Personal Statement</td>
+          <td class="num">5,300 characters</td>
+          <td>Answers one question: <em>why do you want to be a doctor — and what evidence proves you know what that means?</em></td>
+        </tr>
+        <tr>
+          <td>Work &amp; Activities</td>
+          <td class="num">Up to 15 entries</td>
+          <td>Your evidence file. Each entry proves a specific competency. 700 characters per entry; 3 "Most Meaningful" get an additional 1,325 characters each.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout blue">
+      <p>💡 Strategic principle: The personal statement tells the story. The Work &amp; Activities section provides the receipts. They should complement, not repeat, each other.</p>
+    </div>
+  </section>
+
+  <!-- PART 1: PERSONAL STATEMENT -->
+  <section>
+    <h2>Part 1 — Personal Statement</h2>
+
+    <h3>Essay Architecture</h3>
+
+    <p>The most effective personal statements follow a five-movement structure. Each section earns its space by doing a specific narrative job — nothing is filler.</p>
+
+    <div class="structure-flow">
+      <div class="structure-block">
+        <div class="pct">~10%</div>
+        <div class="name">Opening Scene</div>
+        <div class="desc">A concrete moment. Patient encounter, lab realization, clinical observation. Pull the reader in.</div>
+      </div>
+      <div class="structure-block">
+        <div class="pct">~25%</div>
+        <div class="name">Exploration Arc</div>
+        <div class="desc">How you tested the impulse. What you learned, not just what you did.</div>
+      </div>
+      <div class="structure-block">
+        <div class="pct">~15%</div>
+        <div class="name">Core Insight</div>
+        <div class="desc">The pivot. Medicine wasn't what you thought — and you still wanted it.</div>
+      </div>
+      <div class="structure-block">
+        <div class="pct">~25%</div>
+        <div class="name">Competency Evidence</div>
+        <div class="desc">2–3 experiences that prove readiness. One clinical, one scholarly, one human.</div>
+      </div>
+      <div class="structure-block">
+        <div class="pct">~25%</div>
+        <div class="name">Vision Close</div>
+        <div class="desc">What kind of doctor you want to be, grounded in what you've done.</div>
+      </div>
+    </div>
+
+    <h3>What Works</h3>
+
+    <div class="card green-left">
+      <p><strong>A specific opening scene.</strong> Drop the reader into a moment — a patient whose hand you held, a lab result that surprised you, a clinical observation that stayed with you. One scene, vividly rendered. The reader should see it.</p>
+    </div>
+
+    <div class="card green-left">
+      <p><strong>Depth over breadth.</strong> Two experiences described in full — with specific details, realizations, and consequences — will always beat five experiences listed in a paragraph. Adcoms remember the applicant who reflected deeply, not the one who did the most.</p>
+    </div>
+
+    <div class="card green-left">
+      <p><strong>Genuine insight.</strong> The essay's pivot point — the moment you realized medicine was harder, messier, or more human than you expected, and why that made you <em>more</em> committed — is what separates strong essays from generic ones.</p>
+    </div>
+
+    <div class="card green-left">
+      <p><strong>A grounded vision.</strong> Close with the kind of doctor you want to become, anchored to something specific you've already done. "I want to build palliative care pathways for rural communities because I saw what happened to my patient in hospice volunteering" beats "I want to heal the underserved."</p>
+    </div>
+
+    <h3>What to Avoid</h3>
+
+    <div class="card red-left">
+      <p><strong>Starting with childhood.</strong> "Since I was five years old…" "I've always known…" "As a child, I loved science…" These openings are so common they've become invisible. Begin in the present or recent past, with something concrete.</p>
+    </div>
+
+    <div class="card red-left">
+      <p><strong>Listing experiences without reflection.</strong> "I shadowed a cardiologist, volunteered in the ER, and worked in a research lab." None of this tells the reader anything about you. What did you <em>learn</em>? What <em>changed</em>?</p>
+    </div>
+
+    <div class="card red-left">
+      <p><strong>Generic altruism.</strong> "I want to help people" is true of every applicant. It communicates nothing. Show the specific way you want to help, backed by evidence that you've already started.</p>
+    </div>
+
+    <div class="card red-left">
+      <p><strong>Covering everything.</strong> The essay is not your CV in prose. It's an argument about why you should be a doctor, made through 2–3 carefully chosen experiences. Leave room for the Work &amp; Activities section to carry the rest.</p>
+    </div>
+
+    <div class="card red-left">
+      <p><strong>Ending with "and that's why I want to be a doctor."</strong> This is the sign of an essay that didn't know when to stop. Your conclusion should open forward — to the kind of medicine you'll practice — not close backward.</p>
+    </div>
+
+    <hr class="divider">
+
+    <h3>Sample Essay Skeleton</h3>
+
+    <p style="font-size: 0.82rem; color: var(--muted); margin-bottom: 8px;">Replace bracketed content with your specifics.</p>
+
+    <div class="card accent-left">
+      <p style="font-size: 0.85rem; line-height: 1.7;">
+        <strong>[Opening — ~500 chars]</strong><br>
+        <em>Mrs. Chen had been on the ward for three weeks, and I was the only person who could make her laugh — not because I was charming, but because I was the transporter who wheeled her to dialysis every morning at 6 AM. I was nineteen, pre-med, and convinced I was just doing a job.</em>
+      </p>
+    </div>
+
+    <div class="card accent-left">
+      <p style="font-size: 0.85rem; line-height: 1.7;">
+        <strong>[Exploration — ~1,300 chars]</strong><br>
+        <em>Describe how you tested medicine: clinical volunteering, shadowing, scribing, EMT work. What surprised you. What you were bad at. What you wanted more of. The key is showing that you approached this like a hypothesis — you didn't just "want to be a doctor," you systematically investigated whether you should be one.</em>
+      </p>
+    </div>
+
+    <div class="card accent-left">
+      <p style="font-size: 0.85rem; line-height: 1.7;">
+        <strong>[Core Insight — ~800 chars]</strong><br>
+        <em>The pivot point. The moment medicine became something different than what you expected — harder, more systemic, more intimately human — and you chose it anyway. This is where your essay earns its right to exist. "I realized medicine wasn't about fixing bodies. It was about sitting with people when they were most afraid — and the sitting was the medicine."</em>
+      </p>
+    </div>
+
+    <div class="card accent-left">
+      <p style="font-size: 0.85rem; line-height: 1.7;">
+        <strong>[Competency Evidence — ~1,300 chars]</strong><br>
+        <em>2–3 experiences that prove you can do this. One clinical (you've been around patients and the system), one scholarly (you can think rigorously), one human (you've done something hard that required empathy or resilience). Each experience gets a paragraph that shows what you did and what it taught you — not just that it happened.</em>
+      </p>
+    </div>
+
+    <div class="card accent-left">
+      <p style="font-size: 0.85rem; line-height: 1.7;">
+        <strong>[Vision Close — ~1,300 chars]</strong><br>
+        <em>The kind of doctor you'll become, grounded in what you've already started. Specific, honest, ambitious but believable. "I don't know what specialty I'll choose. But I know I want to be the kind of doctor who remembers that the 6 AM transporter is often the most important person in the room — because I was that person, and I watched the doctors who noticed and the ones who didn't."</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- PART 2: WORK & ACTIVITIES -->
+  <section>
+    <h2>Part 2 — Work &amp; Activities</h2>
+
+    <h3>Strategic Architecture</h3>
+
+    <p>Every entry should prove one of the <strong>AAMC Core Competencies</strong>. Admissions committees scan this section for gaps. The goal is coverage across categories, not maximizing entries.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Category</th><th>Recommended Slots</th><th>What Committees Are Scanning For</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Clinical Exposure</td>
+          <td class="num">2–3</td>
+          <td>Direct patient contact beyond shadowing. Proof you know what the job entails — you've seen suffering, mess, ambiguity, and still want in.</td>
+        </tr>
+        <tr>
+          <td>Research</td>
+          <td class="num">1–2</td>
+          <td>Intellectual rigor and curiosity. Even if you're not MD/PhD-bound, research shows you can engage with uncertainty and generate knowledge. Publications and posters are nice; genuine involvement matters more.</td>
+        </tr>
+        <tr>
+          <td>Service / Volunteering</td>
+          <td class="num">2–3</td>
+          <td>Consistent, longitudinal commitment over one-time events. Serving people unlike yourself. The best entries show <em>sustained</em> investment in a community, not a week-long trip.</td>
+        </tr>
+        <tr>
+          <td>Leadership</td>
+          <td class="num">1–2</td>
+          <td>Running something that mattered and making decisions with consequences. Not titles — actions you took and their impact on real outcomes.</td>
+        </tr>
+        <tr>
+          <td>Paid Employment (non-clinical)</td>
+          <td class="num">1–2</td>
+          <td>Any job. Tutoring, retail, food service, research assistant. Paid work demonstrates maturity, responsibility, and the ability to show up. Underrated category.</td>
+        </tr>
+        <tr>
+          <td>Other / Hobbies</td>
+          <td class="num">1–2</td>
+          <td>Arts, athletics, music, making things. Humanizes you. Committees read thousands of applications — the applicant who builds furniture or plays in a jazz quartet is memorable. One real hobby is better than three listed ones.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Most Meaningful Experiences</h3>
+
+    <p>You designate up to <strong>3 experiences</strong> as "Most Meaningful." Each gets an additional <strong>1,325 characters</strong> beyond the standard 700.</p>
+
+    <p><strong>How to choose:</strong> Pick experiences where you can show all three of these:</p>
+
+    <div class="card green-left">
+      <p><strong>1. What you did</strong> — specific actions, decisions, responsibilities. Quantify where possible: caseload size, hours, people affected, outcomes.</p>
+    </div>
+
+    <div class="card green-left">
+      <p><strong>2. What you learned</strong> — something non-obvious. Not "I learned teamwork." Something that surprised you, changed your mind, or made you uncomfortable. This is where reflection lives.</p>
+    </div>
+
+    <div class="card green-left">
+      <p><strong>3. How it shaped the doctor you'll be</strong> — connect the experience forward. "Because of this, I'll approach my patients' uncertainty differently" or "This is why I want to practice in a setting where…"</p>
+    </div>
+
+    <div class="callout blue">
+      <p>💡 Spread your MME designations across categories — one clinical, one research or service, one leadership or personal. Don't make all three clinical; it signals a narrow application.</p>
+    </div>
+
+    <hr class="divider">
+
+    <h3>Entry Writing Formula</h3>
+
+    <div class="card accent-left">
+      <h4>Standard Entry (700 characters)</h4>
+      <p style="font-size: 0.85rem; color: #57534e;">
+        <strong>Action verbs. Specific numbers. Concrete impact.</strong><br><br>
+        ✅ "Managed caseload of 12 patients during overnight shifts. Triaged intake assessments, coordinated with attending physicians on treatment plans, and documented discharge protocols."<br><br>
+        ❌ "Worked with patients. Learned about healthcare. Gained valuable experience."
+      </p>
+    </div>
+
+    <div class="card accent-left">
+      <h4>Most Meaningful Extension (1,325 additional characters)</h4>
+      <p style="font-size: 0.85rem; color: #57534e;">
+        <strong>Tell the story behind the bullet points.</strong><br><br>
+        The difficult moment. The realization you didn't expect. The patient who changed how you think. The mistake you made and what it taught you. This is not a longer description of duties — it's the narrative that makes the experience <em>meaningful</em>. Write it as a story with a beginning (the situation), a middle (the challenge or insight), and an end (how you're different because of it).
+      </p>
+    </div>
+
+    <hr class="divider">
+
+    <h3>Competency Coverage Checklist</h3>
+
+    <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 10px;">Does your 15-entry (or fewer) section prove each of these? If an experience covers multiple competencies, note it — but make sure nothing is missing entirely.</p>
+
+    <ul class="checklist">
+      <li><strong>Service orientation</strong> — evidence you've served people, especially those unlike yourself</li>
+      <li><strong>Social skills</strong> — teamwork, collaboration, interpersonal effectiveness</li>
+      <li><strong>Cultural competence</strong> — experience with diverse populations or cross-cultural settings</li>
+      <li><strong>Teamwork</strong> — working within a hierarchy, contributing to a group outcome</li>
+      <li><strong>Oral communication</strong> — presentations, teaching, patient communication</li>
+      <li><strong>Ethical responsibility</strong> — moments of ethical judgment or integrity under pressure</li>
+      <li><strong>Reliability and dependability</strong> — showing up consistently over time, especially when it was hard</li>
+      <li><strong>Resilience and adaptability</strong> — setback, failure, or adjustment and what you did after</li>
+      <li><strong>Capacity for improvement</strong> — evidence you sought and incorporated feedback</li>
+      <li><strong>Critical thinking</strong> — research, problem-solving, analytical reasoning</li>
+      <li><strong>Quantitative reasoning</strong> — data analysis, statistics, experimental design</li>
+      <li><strong>Scientific inquiry</strong> — hypothesis generation, experimental method, intellectual curiosity</li>
+      <li><strong>Written communication</strong> — publications, theses, significant writing projects</li>
+      <li><strong>Humanism / compassion</strong> — moments where empathy, not procedure, was the intervention</li>
+      <li><strong>Self-awareness</strong> — evidence you know your strengths, weaknesses, and motivations</li>
+    </ul>
+
+    <div class="callout">
+      <p>⚡ <strong>Don't force every competency into its own entry.</strong> One strong research experience can demonstrate critical thinking, quantitative reasoning, scientific inquiry, and written communication. The checklist is for gap detection — to spot what's missing — not a template to fill mechanically.</p>
+    </div>
+  </section>
+
+  <!-- PITFALLS -->
+  <section>
+    <h2>Common Pitfalls Across Both Sections</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Pitfall</th><th>Why It Hurts</th><th>Fix</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Repetition between essay and activities</strong></td>
+          <td>Signals you only have 2–3 experiences worth discussing. Wastes the reader's limited attention.</td>
+          <td>The essay tells the <em>why</em>. The activities section provides the <em>what</em>. They should reference different dimensions of the same experiences, or different experiences entirely.</td>
+        </tr>
+        <tr>
+          <td><strong>Passive voice and abstract claims</strong></td>
+          <td>"Responsibilities included…" and "I gained valuable experience" communicate nothing. They sound like every other applicant.</td>
+          <td>Active verbs, specific numbers, concrete moments. "I designed the protocol" not "the protocol was designed." "I sat with 47 families during code activations" not "I supported families in crisis."</td>
+        </tr>
+        <tr>
+          <td><strong>Trying to sound like a doctor already</strong></td>
+          <td>Overuse of clinical jargon, grandiose claims about "healing," or pretending to know more than you do. Reads as inauthentic.</td>
+          <td>Write as an applicant who is observant, curious, and honest about what you don't know yet. Your voice, not a doctor's voice.</td>
+        </tr>
+        <tr>
+          <td><strong>Ignoring the character limits until the end</strong></td>
+          <td>Writing a 7,000-character essay and then cutting to 5,300 often destroys the narrative arc — you end up with a disjointed summary rather than a crafted argument.</td>
+          <td>Write to the limit from the start. 5,300 characters is approximately 800–900 words. Structure around that constraint.</td>
+        </tr>
+        <tr>
+          <td><strong>Using the MME extension to repeat the standard entry</strong></td>
+          <td>The Most Meaningful extension is your best storytelling real estate. If it's just "I also did X and Y," you've wasted it.</td>
+          <td>The standard entry describes duties. The MME extension tells a story — a specific moment, a realization, a transformation.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- REVIEW PROCESS -->
+  <section>
+    <h2>Review &amp; Revision Protocol</h2>
+
+    <div class="card blue-left">
+      <div class="section-label accent">Pass 1</div>
+      <h4>Structure Check</h4>
+      <p>Does the essay follow the five-movement arc? Does each paragraph earn its length? Does the Work &amp; Activities section cover all major categories? Are there competency gaps? Read only the first and last sentence of each paragraph — do they tell a coherent story?</p>
+    </div>
+
+    <div class="card blue-left">
+      <div class="section-label accent">Pass 2</div>
+      <h4>Voice &amp; Specificity Check</h4>
+      <p>Circle every sentence that could have been written by any other applicant. Replace each with something only you could write — a specific moment, a concrete number, a named person, a real choice you made. Generic statements are dead weight.</p>
+    </div>
+
+    <div class="card blue-left">
+      <div class="section-label accent">Pass 3</div>
+      <h4>External Review</h4>
+      <p>Give the essay to someone who knows you well and ask: "Does this sound like me?" Give it to someone who <em>doesn't</em> know you and ask: "What kind of person wrote this?" If their description doesn't match who you are, revise until it does. If they can't describe you at all, you've been too generic.</p>
+    </div>
+
+    <div class="card blue-left">
+      <div class="section-label accent">Pass 4</div>
+      <h4>Proofread</h4>
+      <p>Read backward (last sentence to first) to catch typos and repeated words. Read aloud to catch rhythm problems and awkward constructions. Have at least one other person proofread — you are blind to your own typos after multiple passes.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="report-footer">
+    <p><strong>AMCAS Primary Application Strategy Guide</strong> · Prepared May 2026 · Based on AAMC Core Competencies and AMCAS 2026 application cycle guidelines · This document provides structural guidance only — all content must reflect your authentic experiences and voice</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
