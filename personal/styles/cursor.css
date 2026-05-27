@@ -1,0 +1,64 @@
+/* ---------------------------------------------------------------
+   Custom cursor — a small candle the visitor carries
+   --------------------------------------------------------------- */
+
+.cursor,
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--chocolate);
+  mix-blend-mode: multiply;
+  transition: width var(--fast) var(--ease),
+              height var(--fast) var(--ease),
+              background var(--fast) var(--ease);
+}
+
+.cursor-glow {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+              rgba(232, 168, 106, 0.35) 0%,
+              rgba(199, 122, 60, 0.18) 30%,
+              rgba(199, 122, 60, 0.00) 65%);
+  filter: blur(2px);
+  mix-blend-mode: screen;
+  transition: opacity var(--med) var(--ease),
+              width var(--med) var(--ease),
+              height var(--med) var(--ease);
+}
+
+.cursor.is-hover {
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: 1px solid var(--umber);
+  mix-blend-mode: normal;
+}
+
+.cursor.is-pressed {
+  width: 24px;
+  height: 24px;
+  background: var(--ember);
+}
+
+/* On dark sections the candle reads as warm light, not ink */
+.theme-dark .cursor {
+  background: var(--candle);
+  mix-blend-mode: screen;
+}
+
+@media (hover: none) {
+  .cursor, .cursor-glow { display: none; }
+}

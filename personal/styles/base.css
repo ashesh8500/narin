@@ -1,0 +1,111 @@
+/* ---------------------------------------------------------------
+   Base — reset, typography, page chrome
+   --------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--t-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  cursor: none;       /* custom cursor takes over on supported devices */
+}
+
+@media (hover: none) { body { cursor: auto; } }
+
+img, svg { max-width: 100%; display: block; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(111, 52, 29, 0.35);
+  transition: color var(--fast) var(--ease), border-color var(--fast) var(--ease);
+}
+a:hover { color: var(--ember); border-color: var(--ember); }
+
+::selection { background: var(--ember); color: var(--cream); }
+
+/* Subtle paper grain — drawn in CSS, no external assets */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  background-image:
+    radial-gradient(rgba(43,25,21,1) 1px, transparent 1px),
+    radial-gradient(rgba(43,25,21,0.8) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+}
+
+/* Vignette — soft warmth at the edges, like candlelight on paper */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(ellipse at center,
+              transparent 50%,
+              rgba(43, 25, 21, 0.18) 100%);
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  position: relative;
+  z-index: 3;
+}
+
+.mono { font-family: var(--mono); letter-spacing: 0.04em; }
+.sans { font-family: var(--sans); }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  margin: 0;
+}
+h2 { font-size: var(--t-h2); }
+p  { margin: 0 0 1em; }
+
+.italic { font-style: italic; }
+hr.rule {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+/* Reveal on scroll — sections start veiled, lift into view */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--slow) var(--ease),
+              transform var(--slow) var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal[data-delay="1"].is-visible { transition-delay: 120ms; }
+.reveal[data-delay="2"].is-visible { transition-delay: 240ms; }
+.reveal[data-delay="3"].is-visible { transition-delay: 360ms; }

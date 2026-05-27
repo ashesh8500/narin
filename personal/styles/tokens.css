@@ -1,0 +1,54 @@
+/* ---------------------------------------------------------------
+   Design tokens — drawn from Narin's mood boards
+   Chocolate, umber, sky blue, beige + warm city-light gold + cream
+   --------------------------------------------------------------- */
+
+:root {
+  /* core palette */
+  --ink:        #1A0F0A;   /* near-black, brown undertone */
+  --chocolate:  #2B1915;
+  --umber:      #6F341D;
+  --ember:      #C77A3C;   /* warm gold from water reflections */
+  --candle:     #E8A86A;   /* soft glow */
+  --sky:        #6F7F9D;   /* mood-board sky blue */
+  --twilight:   #2A3247;   /* deep blue from skyline */
+  --beige:      #A89380;
+  --linen:      #E8DDCB;
+  --cream:      #F4ECE0;
+  --paper:      #F8F2E7;
+
+  /* semantic */
+  --bg:         var(--cream);
+  --bg-alt:     var(--paper);
+  --bg-dark:    var(--ink);
+  --fg:         var(--chocolate);
+  --fg-muted:   #6b5947;
+  --rule:       rgba(43, 25, 21, 0.18);
+  --accent:     var(--umber);
+  --accent-2:   var(--ember);
+
+  /* type */
+  --serif:      'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --sans:       'Inter', system-ui, -apple-system, sans-serif;
+  --mono:       'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+
+  --t-display:  clamp(3.2rem, 9vw, 8rem);
+  --t-h1:       clamp(2.2rem, 5vw, 4rem);
+  --t-h2:       clamp(1.6rem, 3vw, 2.4rem);
+  --t-body:     clamp(1rem, 1.1vw, 1.15rem);
+  --t-small:    0.82rem;
+
+  /* motion */
+  --ease:       cubic-bezier(0.22, 1, 0.36, 1);
+  --slow:       1200ms;
+  --med:        600ms;
+  --fast:       260ms;
+
+  /* layout */
+  --maxw:       1180px;
+  --gutter:     clamp(1.25rem, 4vw, 3rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --slow: 1ms; --med: 1ms; --fast: 1ms; }
+}
