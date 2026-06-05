@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Narin Fazlalipour — B.S. Neuroscience, UC San Diego. Researcher, science communicator, and future physician at the intersection of mind-body medicine." />
+  <meta name="description" content="Narin Fazlalipour — B.S. Neuroscience, UC San Diego. Researcher, science communicator, and future physician." />
   <meta name="theme-color" content="#0B1A3B" />
   <title>Narin Fazlalipour</title>
 
@@ -13,20 +13,24 @@
 
   <link rel="stylesheet" href="./styles/tokens.css" />
   <link rel="stylesheet" href="./styles/base.css" />
-  <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/layout.css?v=2" />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%227%22 fill=%22%232C5AA0%22/></svg>" />
 </head>
 <body>
 
+  <a class="skip-link" href="#tab-narin">Skip to content</a>
+  <div class="read-progress" aria-hidden="true"></div>
+
   <!-- ═══════════════════════ HEADER ═══════════════════════ -->
   <header class="mast">
     <a class="brand" href="#narin" data-tab="narin">Narin&nbsp;Fazlalipour</a>
-    <nav class="tab-nav" role="tablist">
-      <button class="tab-btn active" data-tab="narin" role="tab" aria-selected="true">Narin</button>
-      <button class="tab-btn" data-tab="medicine" role="tab" aria-selected="false">Medicine</button>
-      <button class="tab-btn" data-tab="media" role="tab" aria-selected="false">Media</button>
-      <button class="tab-btn" data-tab="publications" role="tab" aria-selected="false">Publications</button>
+    <nav class="tab-nav" role="tablist" aria-label="Sections">
+      <button class="tab-btn active" data-tab="narin" role="tab" aria-selected="true" tabindex="0">Narin</button>
+      <button class="tab-btn" data-tab="medicine" role="tab" aria-selected="false" tabindex="-1">Medicine</button>
+      <button class="tab-btn" data-tab="media" role="tab" aria-selected="false" tabindex="-1">Media</button>
+      <button class="tab-btn" data-tab="publications" role="tab" aria-selected="false" tabindex="-1">Publications</button>
+      <button class="tab-btn" data-tab="projects" role="tab" aria-selected="false" tabindex="-1">Projects</button>
     </nav>
   </header>
 
@@ -35,39 +39,38 @@
     <div class="wrap">
 
       <div class="narin-hero">
+        <span class="narin-eyebrow">Portfolio · 2026</span>
         <h1 class="narin-name">Narin Fazlalipour</h1>
         <p class="narin-subtitle">
           B.S. Cognitive Science: Behavioral &amp; Neuroscience — UC San Diego
         </p>
         <p class="narin-tagline">
-          Researcher, science communicator, and future physician<br />
-          at the intersection of mind-body medicine.
+          Researcher, science communicator, and future physician.
         </p>
       </div>
 
-      <!-- Couch Card — redesigned overview -->
-      <div class="couch-card">
-        <div class="couch-illustration" aria-hidden="true">
-          <svg viewBox="0 0 320 140" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 40 110 C 40 80, 55 60, 80 60 L 240 60 C 265 60, 280 80, 280 110" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M 30 110 C 30 80, 60 80, 65 115 C 65 130, 40 130, 30 110 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M 290 110 C 290 80, 260 80, 255 115 C 255 130, 280 130, 290 110 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M 60 115 L 260 115 C 270 115, 270 135, 260 135 L 60 135 C 50 135, 50 115, 60 115 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="70" y1="135" x2="65" y2="148" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="250" y1="135" x2="255" y2="148" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="couch-items">
-          <span class="couch-chip">🧠 Neuroscience</span>
-          <span class="couch-chip">💪 Lover of Lagree</span>
-          <span class="couch-chip">❤️ Heart-centered medicine</span>
-          <span class="couch-chip">✨ Mind-body connection</span>
-        </div>
-      </div>
-
-      <div class="contact-row">
-        <a class="contact-link" href="mailto:hello@narinfazlalipour.com">hello@narinfazlalipour.com</a>
-      </div>
+      <nav class="nav-cards" aria-label="Explore">
+        <a class="nav-card nav-card--external" href="https://www.linkedin.com/in/narin-fazlalipour-3a7170165/" target="_blank" rel="noopener noreferrer">
+          <span class="nav-card-label">LinkedIn</span>
+          <span class="nav-card-desc">Professional profile</span>
+          <span class="nav-card-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="nav-card" href="#medicine" data-tab="medicine">
+          <span class="nav-card-label">Medicine</span>
+          <span class="nav-card-desc">Research &amp; clinical work</span>
+          <span class="nav-card-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="nav-card" href="#media" data-tab="media">
+          <span class="nav-card-label">Media</span>
+          <span class="nav-card-desc">Science communication</span>
+          <span class="nav-card-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="nav-card" href="#publications" data-tab="publications">
+          <span class="nav-card-label">Publications</span>
+          <span class="nav-card-desc">Peer-reviewed work</span>
+          <span class="nav-card-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
 
     </div>
   </section>
@@ -91,7 +94,7 @@
           <div class="chrono-marker"></div>
           <div class="chrono-body">
             <span class="chrono-date">Nov 2025 – Present · UCLA Health</span>
-            <h3>Clinical Volunteer &amp; Department Coordinator — UCLA Care Extenders</h3>
+            <h3>Clinical Volunteer &amp; Department Coordinator Assistant— UCLA Care Extenders</h3>
             <p>Volunteering in Neurology and ER departments — transporting patients, assisting nurses, and providing bedside presence. Also serving as Department Coordinator: auditing volunteer performance, gathering staff feedback, and bridging communication between volunteers and management. <strong>120+ clinical hours.</strong></p>
           </div>
         </article>
@@ -101,7 +104,7 @@
           <div class="chrono-marker"></div>
           <div class="chrono-body">
             <span class="chrono-date">Jul – Sep 2025 · USC Verdugo Hospital</span>
-            <h3>Physician Shadowing — Neurology, Dr. Mina Eian</h3>
+            <h3>Physician Shadowing — Neurology, Dr. Minaeian</h3>
             <p>Shadowed neurologist in private clinics and USC Verdugo Hospital rounds. Observed patient evaluations, diagnostic interviews, EEG examinations, and neurological treatment planning.</p>
           </div>
         </article>
@@ -140,7 +143,7 @@
         <article class="chrono-item">
           <div class="chrono-marker"></div>
           <div class="chrono-body">
-            <span class="chrono-date">Mar 2023 – Present · UCSD Neuroscience Dept</span>
+            <span class="chrono-date">Mar 2023 – Present · UCSD Anesthesiology Dept</span>
             <h3>Bench Research — CardioNeuroProtection Lab</h3>
             <p>Built wet lab skills in cell culture, Seahorse metabolic assays, ELISA, PCR, and Western blotting under Hemal H. Patel, PhD. Contributed to neuroimaging analysis. Co-author on <a href="#" data-tab="publications">published paper</a> in <em>Communications Biology</em> (Nature Portfolio). <strong>480+ hours.</strong></p>
           </div>
@@ -193,56 +196,103 @@
         <span class="tab-icon" aria-hidden="true">📡</span>
         <h2 class="tab-title">Media &amp; Communication</h2>
         <p class="tab-intro">
-          Translating complex science into accessible stories — across social media, biotech marketing, and public speaking.
+          Translating complex science into accessible stories — across social media, biotech marketing, and science communication.
         </p>
       </header>
 
-      <div class="chronology">
+      <!-- Stats Strip -->
+      <div class="media-stats">
+        <div class="media-stat">
+          <div class="media-stat-value">0 → 12K</div>
+          <div class="media-stat-label">Organic Growth</div>
+        </div>
+        <div class="media-stat">
+          <div class="media-stat-value">5</div>
+          <div class="media-stat-label">Platforms</div>
+        </div>
+        <div class="media-stat">
+          <div class="media-stat-value">Viral</div>
+          <div class="media-stat-label">Content</div>
+        </div>
+        <div class="media-stat">
+          <div class="media-stat-value">15 Months</div>
+          <div class="media-stat-label">Verséa Tenure</div>
+        </div>
+      </div>
 
-        <!-- Hemal Patel Instagram (most impactful) -->
-        <article class="chrono-item">
-          <div class="chrono-marker"></div>
-          <div class="chrono-body">
-            <span class="chrono-date">Jul 2024 – Present · Ongoing</span>
-            <h3>Instagram Management — Dr. Hemal H. Patel</h3>
-            <p>Sole manager of Dr. Patel's professional Instagram presence. Built the account organically from <strong>0 to 10.7K followers</strong> by translating complex neuroscience and mitochondrial research into engaging, accessible content. Continued voluntarily after Verséa Discovery employment ended — driven by the belief that science only matters when people can understand it.</p>
-            <p>Beyond content creation: directly connected patient families to scientific testing networks via DMs. Once helped a mother find a non-invasive mitochondrial test alternative to a painful muscle biopsy for her child — by consulting the chief scientist and confirming the test's applicability.</p>
+      <!-- Cards -->
+      <div class="media-grid">
+
+        <!-- Hemal Patel -->
+        <article class="media-card">
+          <div class="media-card-header">
+            <h3 class="media-card-title">Dr. Hemal H. Patel</h3>
+            <a class="media-card-handle" href="https://instagram.com/hemalpatelphd" target="_blank" rel="noopener">@hemalpatelphd</a>
+          </div>
+          <div class="media-card-date">Jul 2024 – Present · Ongoing</div>
+          <div class="media-card-pills">
+            <span class="media-pill">Instagram Growth</span>
+            <span class="media-pill">Viral Posts</span>
+            <span class="media-pill">Collabs</span>
+          </div>
+          <div class="media-card-body">
+            <p>Sole manager of Dr. Patel's professional media presence across Instagram and beyond. Built the Instagram account organically from <strong>0 to 12K followers</strong> by translating complex neuroscience and mitochondrial research into engaging, accessible content — creating successful viral posts, solidifying collaborations with high-end accounts, and showcasing a world-class scientist.</p>
           </div>
         </article>
 
         <!-- Verséa Discovery -->
-        <article class="chrono-item">
-          <div class="chrono-marker"></div>
-          <div class="chrono-body">
-            <span class="chrono-date">Jul 2024 – Oct 2025 · Tampa, FL</span>
-            <h3>Media Manager — Verséa Discovery</h3>
-
-            <h4 class="chrono-sub">Media Appearances</h4>
-            <p>Managed media presence for mitochondrial research announcements, coordinating coverage of the company's scientific developments and the <a href="#" data-tab="publications">published study</a> covered by UC San Diego Today.</p>
-
-            <h4 class="chrono-sub">Marketing</h4>
-            <p>Led marketing campaigns, digital advertisements, and website content creation translating mitochondrial efficiency research for both professional and consumer audiences. Developed newsletter communications explaining complex biological concepts in accessible language.</p>
+        <article class="media-card">
+          <div class="media-card-header">
+            <h3 class="media-card-title">Verséa Discovery</h3>
+            <a class="media-card-handle" href="https://instagram.com/discovermescreen" target="_blank" rel="noopener">@discovermescreen</a>
+          </div>
+          <div class="media-card-date">Jul 2024 – Oct 2025 · Tampa, FL</div>
+          <div class="media-card-pills">
+            <span class="media-pill">Marketing</span>
+            <span class="media-pill">Meta Ads</span>
+            <span class="media-pill">Content</span>
+            <span class="media-pill">Monday Mitos</span>
+          </div>
+          <div class="media-card-body">
+            <div class="media-card-sub">Marketing</div>
+            <p>Created campaigns for introducing new products, built and edited the company website, and conducted A/B analysis to optimize messaging and conversion across consumer and professional audiences.</p>
+            <div class="media-card-sub">Advertisements</div>
+            <p>Created advertisement content and ran ad campaigns on Meta, translating mitochondrial efficiency research into compelling paid media that reached both clinical and wellness audiences.</p>
+            <div class="media-card-sub">Media</div>
+            <p>Shot and created content, developed storytelling narratives around the company's science, managed media presence end-to-end across YouTube, Instagram, X, LinkedIn, and TikTok — and provided customer service via DM, handling inquiries directly from patients and practitioners. Produced the weekly <strong>Monday Mitos</strong> series and blog content translating mitochondrial research for a growing audience.</p>
           </div>
         </article>
 
-        <!-- TEDx -->
-        <article class="chrono-item">
-          <div class="chrono-marker"></div>
-          <div class="chrono-body">
-            <span class="chrono-date">2023 · UC San Diego</span>
-            <h3>TEDxUCSD — Student Speaker</h3>
-            <p>Delivered a talk on <strong>"Ego"</strong> — exploring how recognizing and redefining ego can shift perspective. One of four student speakers selected for the 2023 conference.</p>
-            <a class="ext-link" href="https://tedxucsd.com/speakers/" target="_blank" rel="noopener">tedxucsd.com/speakers ↗</a>
+        <!-- Sean Fetcho -->
+        <article class="media-card">
+          <div class="media-card-header">
+            <h3 class="media-card-title">Sean Fetcho, CEO</h3>
+            <a class="media-card-handle" href="https://instagram.com/sean.fetcho" target="_blank" rel="noopener">@sean.fetcho</a>
+          </div>
+          <div class="media-card-date">Tampa, FL</div>
+          <div class="media-card-pills">
+            <span class="media-pill">LinkedIn</span>
+            <span class="media-pill">Instagram</span>
+            <span class="media-pill">Executive Brand</span>
+          </div>
+          <div class="media-card-body">
+            <p>Personal account management across LinkedIn and Instagram — curating and sharing content from conferences, investor presentations, and business trips to build an executive brand that reflects the company's vision.</p>
           </div>
         </article>
 
         <!-- UCSD STARS -->
-        <article class="chrono-item">
-          <div class="chrono-marker"></div>
-          <div class="chrono-body">
-            <span class="chrono-date">Oct 2022 – Jun 2024 · UC San Diego</span>
-            <h3>Research Coordinator — UCSD STARS</h3>
-            <p>Managed social media channels and recruitment content for the Summer Training Academy for Research Success. Coordinated program logistics, matched undergraduates with PhD mentors, and ran seminar schedules over 20 months.</p>
+        <article class="media-card">
+          <div class="media-card-header">
+            <h3 class="media-card-title">UCSD STARS — Undergraduate Research Coordinator</h3>
+          </div>
+          <div class="media-card-date">Oct 2022 – Jun 2024 · UC San Diego</div>
+          <div class="media-card-pills">
+            <span class="media-pill">LinkedIn</span>
+            <span class="media-pill">Facebook</span>
+            <span class="media-pill">Recruitment</span>
+          </div>
+          <div class="media-card-body">
+            <p>Created content for LinkedIn to attract prospective students to the program, drove engagement across Facebook and LinkedIn communities, and coordinated program logistics — matching undergraduates with PhD mentors and running seminar schedules over 20 months.</p>
           </div>
         </article>
 
@@ -300,6 +350,140 @@
           </div>
         </article>
 
+        <!-- TEDx -->
+        <article class="chrono-item pub-featured">
+          <div class="chrono-marker pub-marker"></div>
+          <div class="chrono-body">
+            <span class="chrono-date">2023 · UC San Diego</span>
+            <span class="pub-journal">Selected Speaker</span>
+            <h3>TEDxUCSD — "Ego"</h3>
+            <p>One of four student speakers selected for the 2023 conference. Explored how recognizing and redefining ego can shift perspective — bringing neuroscience and self-inquiry to a public audience.</p>
+            <div class="pub-details">
+              <div class="pub-detail">
+                <a href="https://tedxucsd.com/speakers/" target="_blank" rel="noopener">tedxucsd.com/speakers ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ TAB: PROJECTS ═══════════════════════ -->
+  <section class="tab-panel" id="tab-projects" role="tabpanel">
+    <div class="wrap">
+
+      <header class="tab-header">
+        <span class="tab-icon" aria-hidden="true">📋</span>
+        <h2 class="tab-title">Projects &amp; Audits</h2>
+        <p class="tab-intro">
+          Social media audits and competitive intelligence reports for evidence-based health, wellness, and biohacking creators.
+        </p>
+      </header>
+
+      <div class="project-grid">
+        <a class="project-card" href="projects/casablui-contract.html">
+          <span class="project-kind">Media Management Contract</span>
+          <span class="project-name">Casa Blui — Proposal &amp; Contract</span>
+          <span class="project-meta">Instagram · June 2026</span>
+          <span class="project-desc">
+            Clean, easy-to-yes media management contract. Instagram-only, Thursdays with Casa Blui blog, testimonial workaround for high-ticket clients, founder storytelling front and center.
+          </span>
+          <span class="project-cta">View Contract →</span>
+        </a>
+
+        <a class="project-card" href="projects/auditlayer-scorecard.html">
+          <span class="project-kind">Forensic Self-Audit</span>
+          <span class="project-name">AuditLayer — @auditlayer</span>
+          <span class="project-meta">Instagram · 3.6K followers · June 2026</span>
+          <span class="project-desc">
+            Circular-scored forensic audit of AuditLayer's own Instagram. 15-section analysis with pre-launch content strategy — proving the product by applying it to itself.
+          </span>
+          <span class="project-cta">View Report →</span>
+        </a>
+
+        <a class="project-card" href="projects/discovermescreen-battlefield.html">
+          <span class="project-kind">Competitive Battlefield</span>
+          <span class="project-name">mescreen™ — @discovermescreen</span>
+          <span class="project-meta">Instagram · 6.6K followers · May 2026</span>
+          <span class="project-desc">
+            Competitive battlefield assessment: the arsenal, the blind spots, the opponent's moves, and a 90-day campaign to lead the at-home health testing category.
+          </span>
+          <span class="project-cta">View Report →</span>
+        </a>
+
+        <a class="project-card" href="projects/seanfetcho-story.html">
+          <span class="project-kind">Founder Story Arc</span>
+          <span class="project-name">Sean Fetcho — @sean.fetcho</span>
+          <span class="project-meta">Instagram · 2.1K followers · May 2026</span>
+          <span class="project-desc">
+            Narrative-driven founder story assessment: who he is, the gap between the man and the feed, the stories not yet told, and a 90-day storytelling engine.
+          </span>
+          <span class="project-cta">View Report →</span>
+        </a>
+
+        <a class="project-card" href="projects/hemalpatelphd-scorecard.html">
+          <span class="project-kind">Research Translation Scorecard</span>
+          <span class="project-name">Dr. Hemal Patel — @hemalpatelphd</span>
+          <span class="project-meta">Instagram · 11K followers · May 2026</span>
+          <span class="project-desc">
+            Bench-to-feed assessment of a UCSD professor's Instagram: the translation gap between 186 publications and 1.96% engagement, peer-reviewed against comparable PhD creators, with a 90-day protocol to 20K.
+          </span>
+          <span class="project-cta">View Report →</span>
+        </a>
+
+        <a class="project-card" href="projects/atllasai-partnership.html">
+          <span class="project-kind">Client Partnership</span>
+          <span class="project-name">AtllasAI — Social Media Contract</span>
+          <span class="project-meta">Strategy · Content · Pricing · Terms · May 2026</span>
+          <span class="project-desc">
+            Full social media management proposal and contract for @atllasai. Audit-first pitch, brand voice architecture, weekly content calendar, three-tier pricing, and complete legal terms — built on a full Instagram audit before asking for a dollar.
+          </span>
+          <span class="project-cta">View Contract →</span>
+        </a>
+
+        <a class="project-card" href="projects/bahamii-opportunity.html">
+          <span class="project-kind">Brand Opportunity Analysis</span>
+          <span class="project-name">Bahamii — Feed Gap Analysis</span>
+          <span class="project-meta">Instagram · 4.5K followers · June 2026</span>
+          <span class="project-desc">
+            Strategic gap analysis of @eatbahamii's Instagram: what's working, what's missing, and where a media manager unlocks the brand's story — first-gen founders, Farsi roots, 18 months to Costco.
+          </span>
+          <span class="project-cta">View Analysis →</span>
+        </a>
+
+        <!-- REMOVED: Media Management Proposal — Dr. Hemal Patel (hemal-media-management.html) -->
+
+        <a class="project-card" href="projects/mescreen-street-interview.html">
+          <span class="project-kind">Street Interview</span>
+          <span class="project-name">mescreen™ × Narin Fazlalipour</span>
+          <span class="project-meta">Rate &amp; approach · June 2026</span>
+          <span class="project-desc">
+            On-the-street mitochondrial health interviews — rate sheet and approach overview. $1,500 per half-day session, curated question design, real-time scientific credibility on camera.
+          </span>
+          <span class="project-cta">View Rate Sheet →</span>
+        </a>
+
+        <a class="project-card" href="projects/hemal-dispenza-collabs.html">
+          <span class="project-kind">Collaboration Roadmap</span>
+          <span class="project-name">Dr. Hemal Patel × Dr Joe Dispenza</span>
+          <span class="project-meta">5 content formats · 2.2M existing views · June 2026</span>
+          <span class="project-desc">
+            Five collaboration formats to turn a proven partnership into a recurring engine — Q&amp;A Reels, paper deep-dives, Meditation Lab, transformation stories, and joint Instagram Lives. Built on two collabs that already hit 1.2M and 1M views.
+          </span>
+          <span class="project-cta">View Roadmap →</span>
+        </a>
+
+        <div class="project-card project-placeholder">
+          <span class="project-kind">Coming Soon</span>
+          <span class="project-name">Additional audits &amp; work samples</span>
+          <span class="project-meta">AuditLayer · client reports</span>
+          <span class="project-desc">
+            Future projects will appear here — social media audits and competitive intelligence for creators in health, wellness, and biohacking.
+          </span>
+        </div>
       </div>
 
     </div>
